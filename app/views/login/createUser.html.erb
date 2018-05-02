@@ -1,0 +1,50 @@
+<div class="create">
+<h2>Registration Page</h2>
+
+<script>
+      function showPassword() {
+          var x = document.getElementById("password");
+          if (x.type === "password") {
+              x.type = "text";
+          } else {
+              x.type = "password";
+          }
+      }
+</script>
+
+<form class="login-form" action="createUser" method="get">
+  <H4>Full Name:</H4>
+  <input type="text" id="full_name" name="full_name" required/>
+  <br/>
+  <H4>Street Address:</H4>
+  <input type="text" id="street_address" name="street_address" >
+  <br />
+  <H4>City:</H4>
+  <input type="text" id="city" name="city" >
+  <br />
+  <H4>State:</H4>
+  <input type="text" id="state" name="state" >
+  <br />
+  <H4>Postal Code:</H4>
+  <input type="text" id="postal_code" name="postal_code" >
+  <br />
+  <H4>Country:</H4>
+  <input type="text" id="country" name="country" >
+  <br />
+  <H4>Email:</H4>
+  <input type="email" id="email_address" name="email_address" required >
+  <br />
+  <H4>User Name:</H4>
+  <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,}" required title="6 characters minimum and only Alpha Numeric" required >
+  <br />
+  <H4>password:</H4>
+  <input type="password" id="password" name="password" pattern="((?=.*[!@#$%]).{6,})" required title="6 characters minimum and must contains at lease one of !@#$%" required >
+  <br />
+  <input class="btn" type="submit" value="create User"/>
+  <br />
+  <%= flash[:alert] %>
+</form>
+
+</div>
+
+<%= yield %>

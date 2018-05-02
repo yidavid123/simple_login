@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+     <% user = params[:user] %>
+    <h1>Recovery Username and password for ROR LOGIN, <%= user.full_name %></h1>
+    <p>
+      Please signed up to ROR LOGIN,
+      your username is: <%= user.username %><br>
+      your password is: <%= user.password %><br>
+    </p>
+
+    <p>Thanks and have a great day!</p>
+  </body>
+</html>

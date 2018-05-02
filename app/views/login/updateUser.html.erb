@@ -1,0 +1,41 @@
+<div class="create">
+<h2>Update User Info</h2>
+
+<form class="login-form" action="updateUser" method="get">
+
+  <H4>Full Name:</H4>
+ <% user = YAML.load(session[:user]) %>
+  <input type="text" id="full_name" name="full_name" value='<%= user.full_name%>' required/>
+  <br/>
+  <H4>Street Address:</H4>
+  <input type="text" id="street_address" name="street_address" value='<%= user.street_address%>' />
+  <br />
+  <H4>City:</H4>
+  <input type="text" id="city" name="city" value='<%= user.city%>' />
+  <br />
+  <H4>State:</H4>
+  <input type="text" id="state" name="state" value='<%= user.state%>'>
+  <br />
+  <H4>Postal Code:</H4>
+  <input type="text" id="postal_code" name="postal_code" value='<%= user.postal_code%>'>
+  <br />
+  <H4>Country:</H4>
+  <input type="text" id="country" name="country" value='<%= user.country%>'>
+  <br />
+  <H4>Email:</H4>
+  <input type="email" id="email_address" name="email_address" value='<%= user.email_address%>' required >
+  <br />
+  <H4>User Name:</H4>
+  <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]{6,}" required title="6 characters minimum and only Alpha Numeric" required value='<%= user.username%>' >
+  <br />
+  <H4>password:</H4>
+  <input type="text" id="password" name="password" pattern="((?=.*[!@#$%]).{6,})" required title="6 characters minimum and must contains at lease one of !@#$%" required value='<%= user.password%>' >
+  <br />
+  <input class="btn" type="submit" value="Update"/>
+  <br />
+  <%= flash[:alert] %>
+</form>
+
+</div>
+
+<%= yield %>

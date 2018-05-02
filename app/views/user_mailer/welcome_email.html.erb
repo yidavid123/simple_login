@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+     <% user = params[:user] %>
+    <h1>Welcome to ROR LOGIN, <%= user.full_name %></h1>
+    <p>
+      You have successfully signed up to ROR LOGIN,
+      your username is: <%= user.username %>.<br>
+    </p>
+
+    <p>Thanks for joining and have a great day!</p>
+  </body>
+</html>

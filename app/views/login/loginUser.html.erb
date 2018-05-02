@@ -1,0 +1,35 @@
+
+<div class="login">
+
+  <div class="login-header">
+    <h1>Login</h1>
+  </div>
+
+  <div class="login-form">
+    <form action="loginUser" method="get">
+      <h3>Username:</h3>
+      <input type="text" placeholder="Username" id="username" name="username" required/><br>
+      <h3>Password:</h3>
+      <input type="password" placeholder="Password" id="password" name="password"  required/>
+      <br>
+      <input class="btn" type="submit" value="Login"/>
+      <br>
+    </form>
+
+
+    <a class="sign-up" type="submit" value="createUser" href="createUser" > Sign Up!</a>
+    <br/>
+
+    <a class="user-recovery" type="submit" value="recoverUser" href="recoverUser" > Recover!</a>
+
+    <br>
+  </div>
+
+  <div class="flashbox">
+  <% if flash.now[:alert] != nil %>
+    <%= flash[:alert] %>
+  <% end %>
+  </div>
+</div>
+
+<%= yield %>
